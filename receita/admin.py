@@ -1,3 +1,7 @@
 from django.contrib import admin
+# Importando nossa Class Receita de 'models.py'
+from .models import Receita
 
-# Register your models here.
+# Rigistrando meu modelo de receita
+admin.site.register(Receita)
+

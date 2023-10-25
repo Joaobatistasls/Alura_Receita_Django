@@ -1,16 +1,14 @@
 from django.shortcuts import render
+# Importando minha Class Receita para a views.py
+from .models import Receita
 
 def index(request):
-    # Criando minha variavel com os nomes da receita
-    receita = {
-        1: 'Lasanha',
-        2: 'Torta', 
-        3: 'Sopa de Legumes',
-        4: 'Bolo'
-    }
+    # Pegando todos os objetos da minha Rceita e do Admin
+    receitas = Receita.objects.all()
+
     # Criando a variavel dados para guarda as minha receitas
     dados = {
-        'nome_das_receitas': receita
+        'receitas': receitas
     }
     # Usando o dados para renderizar minha receitas na tela
     return render(request,'index.html', dados)

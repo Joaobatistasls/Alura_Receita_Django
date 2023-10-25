@@ -34,22 +34,28 @@
     <section class="best-receipe-area">
         <div class="container">
             <div class="row">
-                <!-- Criando um for para os cards receitas aparecer automaticamente -->
-                <!-- items - Server para pegar o valor do meu dicionario -->
-                {% for chave, nome_da_receita in nome_das_receitas.items %}
+                <!-- Criando uma VERIFICAÇÃO para ve se meu OBJETO tem RECEITA -->
+                {% if receitas %}
+                <!-- Criando um LOOP para passar pelas minhas RECEITAS-->
+                {% for receita in receitas %} 
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
                         <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
                         <div class="receipe-content">
                             <a href="receita.html">
-                                <h5>{{ nome_da_receita }}</h5>
+                                <!-- Exibindo o NOME DA RECEITA -->
+                                <h5>{{ receita.nome_receita }}</h5>
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- Comando para dizer onde meu for acaba -->
                 {% endfor %}
+                <!-- ELSE para caso NÃO TENHA NENHUMA RECEITA -->
+                {% else %}
+                <!-- Indicando o FIM DO IF -->
+                {% endif %}
             </div>
         </div>
     </section>
