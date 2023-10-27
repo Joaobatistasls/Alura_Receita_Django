@@ -13,6 +13,9 @@ urlpatterns = [
     path('', views.index, name='index'),
     # Criando a rota de receita
     # path('nome que eu quero na url', metodo da views.py, nome para o metodo)
-    path('receita', views.receita, name='receita')
+    # Prevendo o ID da RECEITA
+    path('<int:receita_id>', views.receita, name='receita')
 ]
+
+
 
