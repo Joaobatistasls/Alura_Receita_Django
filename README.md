@@ -24,15 +24,13 @@ git clone https://github.com/Joaobatistasls/Alura_Receita_Django
 
 ### Ambiente Virtual Venv 
 ```
-Linux
-
-```
 python3 -m venv ./venv
-
+```
+Linux
 ```
 source caminho/venv/bin/activate
 ```
-Documentação (Venv)
+Documentação (Ambiente Virtual - Venv)
 ```
 https://docs.python.org/pt-br/3/library/venv.html
 ```
