@@ -4,8 +4,9 @@ from django.shortcuts import render, get_list_or_404, get_object_or_404
 from .models import Receita
 
 def index(request):
-    # Pegando todos os objetos da minha Rceita e do Admin
-    receitas = Receita.objects.all()
+    # Criando um FILTRO para pegar apenas as receitas 
+    # Publicada na Página e no Admin
+    receitas = Receita.objects.filter(publicada=True)
 
     # Criando a variavel dados para guarda as minha receitas
     dados = {
