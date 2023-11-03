@@ -134,6 +134,12 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'alurareceita/static')
 ]
 
+# Midea
+MIDEA_ROOT = os.path.join(BASE_DIR,'media')
+# Para salva o caminho da minha imagem para referecia para onde ela vai
+MIDEA_URL = '/media/'
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

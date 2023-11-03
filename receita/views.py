@@ -6,7 +6,7 @@ from .models import Receita
 def index(request):
     # Criando um FILTRO para pegar apenas as receitas 
     # Publicada na Página e no Admin
-    receitas = Receita.objects.filter(publicada=True)
+    receitas = Receita.objects.order_by('-date_receita').filter(publicada=True)
 
     # Criando a variavel dados para guarda as minha receitas
     dados = {

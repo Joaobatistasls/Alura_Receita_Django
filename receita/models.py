@@ -24,3 +24,5 @@ class Receita(models.Model):
     # Criando um FILTRO para nossas RECEITA ESTÁ PUBLICADA
     # Primeiro argumento do BooleanField(), é um valor DEFAULT = True ou False
     publicada = models.BooleanField(default=False)
+    # Criando campo para colocar Imagem 
+    foto_receita = models.ImageField(upload_to='fotos/%d/%m/%Y/', blank=True)

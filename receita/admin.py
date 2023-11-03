@@ -6,7 +6,7 @@ from .models import Receita
 class ListandoReceitas(admin.ModelAdmin):
     # Usando o list_display para coloca o nome o id da receita 
     # no Django Admin
-    list_display = ('id', 'nome_receita', 'categoria')
+    list_display = ('id', 'nome_receita', 'categoria', 'publicada')
     # Deixando outros componentes como link no Admin
     list_display_links = ('id', 'nome_receita')
     # Adicionando um campo de buscar no Django Admin
@@ -18,6 +18,8 @@ class ListandoReceitas(admin.ModelAdmin):
     # Adicionando uma Paginação para que o scroll não fique grande
     # list_per_page = numero de conteudo que quero por pagina
     list_per_page = 5
+    # Para dizer que o campo do Admin é Editavel
+    list_editable = ('publicada',)
 
 # Rigistrando meu modelo de receita e Lista da Receita
 admin.site.register(Receita, ListandoReceitas)
